@@ -1,0 +1,6 @@
+we write in c++
+we build this project in window and compille with vs 2013
+we buile the model by using svm algo of libsvm 
+our accuracuty is 97.8%
+the num of code is about 200lines
+
