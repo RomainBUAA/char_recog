@@ -10,6 +10,7 @@
 #include <vector>
 #include <Windows.h>
 #include "svm.h"
+#include<time.h>
 #define MAX_CHAR_LEN 256
 #define MAX_SINGLE_LEN 100
 using namespace std;
@@ -74,7 +75,7 @@ void store_data_fuc(const string &_path, vector<SvmData> & _svm_data_vec)
 
 void main()
 {
-
+	clock_t start_time = clock();
 	vector<SvmData> svm_data_vec;
 	string path="D:\\project\\LetterReg\\a.data";
 	store_data_fuc(path, svm_data_vec);
@@ -85,6 +86,8 @@ void main()
 	svm_realise.parse_class_data();
 	svm_realise.train_model();
 	svm_realise.predict();
+	clock_t end_time = clock();
+	cout << "Running time is: " << static_cast<double>(end_time - start_time) / CLOCKS_PER_SEC * 1000 << "ms" << endl;//输出运行时间
 	system("pause");
 
 }

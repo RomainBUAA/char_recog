@@ -1,6 +1,8 @@
 we write in c++
 we build this project in window and compille with vs 2013
 we buile the model by using svm algo of libsvm 
-our accuracuty is 97.8%
+our accuracuty is 97.8% in 64754ms
+for using this project ,the reader can adjust the var "path" defined in the main function to the input file path and run is ok
+or put the input file in the exe
 the num of code is about 200lines
 
